@@ -1,6 +1,6 @@
 import express from "express";
 const app = express(); 
-// import Connection from "./database/connectDB.js";
+import Connection from "./database/connectDB.js";
 import Routes from "./routes/routes.js";
 var PORT = process.env.PORT || 5000;
 import bodyParser from "body-parser";
@@ -10,7 +10,7 @@ import cors from "cors";
 app.use(cors());
 
 // // Connecting Database
-// Connection();
+Connection();  
 
 // //Declaring Routes
 app.use("/", Routes);
